@@ -18,7 +18,6 @@ def es_correo_valido(correo):
         return False
     return '.' in parte_dominio
 
-
 def es_contrasena_valida(contrasena):
     if contrasena is None:
         return False
