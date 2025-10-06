@@ -29,10 +29,12 @@ def validar_correo(texto: str) -> Tuple[bool, str]:
 
 
     # TODO 1: si 'texto' NO es str -> (False, "validacion.email.invalido")
-
+    if texto != str:
+        return(False, "validacion.email.invalido")
 
     # TODO 2: si 'limpio' está vacío -> (False, "validacion.email.invalido")
-
+    if limpio.strip() == "":
+        return(False, "validacion.email.invalido")
     # TODO 3: si hay espacios dentro -> (False, "validacion.email.invalido")
 
 
