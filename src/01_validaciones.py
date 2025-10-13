@@ -28,6 +28,7 @@ def es_contrasena_valida(contrasena):
     tiene_letra = any((c.isalpha() for c in contrasena))
     tiene_numero = any((c.isdigit() for c in contrasena))
     return tiene_letra and tiene_numero
+
 if __name__ == '__main__':
     print('Pruebas rápidas de validaciones:')
     print("es_texto_vacio('hola') ->", es_texto_vacio('hola'))
