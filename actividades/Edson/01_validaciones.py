@@ -29,14 +29,17 @@ def validar_correo(texto: str) -> Tuple[bool, str]:
 
 
     # TODO 1: si 'texto' NO es str -> (False, "validacion.email.invalido")
-
+    if texto is None:
+        return True
+    texto = str(texto)
 
     # TODO 2: si 'limpio' está vacío -> (False, "validacion.email.invalido")
+    texto_sin_espacios = texto.strip()
 
     # TODO 3: si hay espacios dentro -> (False, "validacion.email.invalido")
+    return (texto_sin_espacios == '', "validacion.email.invalido")
 
-
-def validar_texto_no_vacio(texto: str) -> Tuple[bool, str]:
+def validar_texto_no_vacio(texto):
     """
     validar_texto_no_vacio(texto: str) -> (ok, mensaje_clave)
     Regla:
@@ -47,6 +50,10 @@ def validar_texto_no_vacio(texto: str) -> Tuple[bool, str]:
     """
     
      # TODO 4: si 'texto' NO es str -> (False, "validacion.texto.vacio")
-
+    if texto != str(texto):
+        return False, "validacion.texto.vacio"
     # TODO 5: si hay al menos un carácter no espacio -> ok
-
+    texto = str(texto)
+    if texto.strip() != "":
+        return "ok"
+    
