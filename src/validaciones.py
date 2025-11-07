@@ -5,6 +5,7 @@ def es_texto_vacio(texto):
     texto_sin_espacios = texto.strip()
     return texto_sin_espacios == ''
 
+
 def es_correo_valido(correo):
     if correo is None:
         return False
@@ -29,11 +30,3 @@ def es_contrasena_valida(contrasena):
     tiene_numero = any((c.isdigit() for c in contrasena))
     return tiene_letra and tiene_numero
 
-if __name__ == '__main__':
-    print('Pruebas rápidas de validaciones:')
-    print("es_texto_vacio('hola') ->", es_texto_vacio('hola'))
-    print("es_texto_vacio('   ') ->", es_texto_vacio('   '))
-    print("es_correo_valido('alguien@ucol.mx') ->", es_correo_valido('alguien@ucol.mx'))
-    print("es_correo_valido('alguien@ucol') ->", es_correo_valido('alguien@ucol'))
-    print("es_contrasena_valida('abc12345') ->", es_contrasena_valida('abc12345'))
-    print("es_contrasena_valida('1234567') ->", es_contrasena_valida('1234567'))
