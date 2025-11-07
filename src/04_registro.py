@@ -9,6 +9,7 @@ def crear_usuario(matricula, correo, contrasena):
 # TODO 2: Validar contraseña
 
 # TODO 3: Agregar usuario a la lista
+    
     return (True, 'Usuario creado correctamente.')
 
 # TODO 4: Listar usuarios registrados
